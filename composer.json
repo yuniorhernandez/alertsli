@@ -1,0 +1,36 @@
+{
+    "name": "yuniorhernandez/alertsli",
+    "description": "Access the Alerts.LI API, Create short and friendly URLs for your text messages and emails.",
+    "type": "library",
+    "license": "MIT",
+    "version": "2.0.2",
+    "autoload": {
+        "psr-4": {
+            "Yuniorhernandez\\Alertsli\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Juan Y Hernandez",
+            "email": "yuniorhernandez2002@gmail.com"
+        }
+    ],
+    "require": {
+        "guzzlehttp/guzzle": "^7.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^8.10"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yuniorhernandez\\Alertsli\\AlertsliServiceProvider"
+            ],
+            "aliases": {
+                "Alertsli": "Yuniorhernandez\\Alertsli\\Facades\\Alertsli"
+            }
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
