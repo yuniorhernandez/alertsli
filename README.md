@@ -31,7 +31,7 @@ class InvoiceController extends Controller
         // Link to include in the message
         $link = Alertsli::createLink([
             'title' => 'Link to Invoice',
-            'url' => "https://www.tu-pagina-web.com/invoice/" . $invlice . "/view",
+            'url' => "https://www.your-web-page.com/invoice/" . $invlice . "/view",
             'description' => 'Link to invoice view.',
             'is_disabled' => false,
         ]);
@@ -46,6 +46,17 @@ $link = Alertsli::createLink([
      'description' => 'Link description, optional',
      'is_disabled' => false, //If it is true, the link will be deactivated.
  ]);
+// return array
+{
+    "title": "Link to Invoice",
+    "access_link": "http://alerts.li/L110034",
+    "code": "L110034",
+    "url": "https://www.your-web-page.com/invoice/AH7420HL004-20230917/view",
+    "description": "Link to invoice view.",
+    "is_disabled": 0,
+    "created_at": "2023-09-16T16:26:39.000000Z",
+    "updated_at": "2023-09-16T16:26:39.000000Z"
+}
 ```
 ```php
 $options = [
@@ -63,7 +74,7 @@ $link = Alertsli::getLink($code); // return array
 $code = 'AL6399'; // Link code
 $data = [
     'title' => 'Link to Invoice',
-    'url' => "https://www.tu-pagina-web.com/invoice/" . $invlice . "/view",
+    'url' => "https://www.your-web-page.com/invoice/" . $invlice . "/view",
     'description' => 'Link to invoice view.',
     'is_disabled' => false,
 ];
